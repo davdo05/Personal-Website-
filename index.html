@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang= "en"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE-edge"> 
+    <meta name="viewport" content = "width=device-width, initial-scale = 1.0"> 
+    <title>David Do's Personal Portfolio</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body> 
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src = "images/logo.png" class = "logo">
+            <ul id="sidemenu">
+                <li>
+                    <a href="#header">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav> 
+        <div class="header-text">
+            <p>Math-CS and Economics</p>
+            <h1>Hi, I'm <span>David Do </span><br>From UCSD</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m a driven double major in Math-CS and 
+                    Economics at UC San Diego with strong technical experience in data analysis,
+                    SQL, Python, and Power BI. I’ve led and contributed to multiple data projects—from 
+                    e-commerce sales analysis to public health and Spotify engagement—emphasizing data cleaning, visualization, 
+                    and automation. With a passion for structured problem-solving and real-world impact, 
+                    I aim to bridge data and decision-making in business or research environments.</p>
+
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class = "tab-links" onclick="opentab('experiences')"> Experiences </p>
+                        <p class = "tab-links" onclick="opentab('education')"> Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "skills">
+                        <ul>
+                            <li><span>Python & SQL</span><br>Data pipelines, querying, and automation</li>
+                            <li><span>Power BI</span><br>Interactive dashboards, DAX, and visual analytics</li>
+                            <li><span>API Integration</span><br>RESTful APIs, Spotify metadata, and C# CRUD systems</li>
+                            <li><span>Data Engineering</span><br>ETL pipelines, Snowflake migration, and Git</li>
+                            <li><span>C# & ASP.NET</span><br>Building CRUD API for user management</li>
+                            <li><span>Data Cleaning</span><br>Deduplication, null filtering, and normalization</li>
+                            <li><span>Excel & PivotTables</span><br>Dashboard building and product segmentation</li>
+                            <li><span>Programming</span><br>MATLAB, Java, Python, and numerical analysis</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "experiences">
+                        <ul>
+                            <li><span>Data Engineer Intern</span><br>AllianceChicago – Migrated SQL Server to Snowflake, optimized ETL workflows, and implemented Git-based version control</li>
+                            <li><span>AI & Data Science Intern</span><br>Motives Vietnam – Developed complex SQL queries, explored RESTful APIs, and supported LLM-based agent automation</li>
+                            <li><span>Economics Research Assistant</span><br>UC San Diego – Collected and digitized data, conducted statistical analysis using Python, Stata, and R</li>
+                            <li><span>Statistician – Billiards Club</span><br>UC San Diego – Automated player rankings using Python and Google Sheets, applying object-oriented logic and edge-case handling</li>
+                            <li><span>Statistics Intern</span><br>VinaCapital Foundation – Led a statistical impact study using SRS and confidence intervals to analyze healthcare funding outcomes</li>
+                        </ul>
+                    </div>
+                    <div class = "tab-contents" id="education">
+                        <ul>
+                            <li><span>University of California, San Diego</span><br>B.S. in Applied Mathematics (Sep 2023 – Jun 2027)</li>
+                            <li><span>University of California, San Diego</span><br>B.S. in Economics (Sep 2023 – Jun 2027)</li>
+                        </ul>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------portfolio---------- -->
+<!-- ---------portfolio---------- -->
+<div id="portfolio"> 
+  <div class="container">
+    <h1 class="sub-title">My Projects</h1>
+
+    <!-- First row of visible projects -->
+    <div class="work-list">
+      <!-- Project 1 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-1.png">
+          <div class="layer">
+            <h3>Spotify Engagement & Metadata Analytics</h3>
+            <p>Developed a full-stack music analytics pipeline using Python and the Spotify API to extract and clean metadata for 1,000+ songs.
+              Built an interactive Power BI dashboard with KPI cards, Deneb heatmaps,
+              and HTML-based image rendering to visualize top-streamed tracks and uncover engagement trends.</p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMWIxZmQxMGUtNWZiNy00ZGIwLWIyNDMtOGM0YmRjNDU0MTAwIiwidCI6IjhhMTk4ODczLTRmZWMtNGU3Ni04MTgyLWNhNDc5ZWRiYmQ2MCIsImMiOjZ9"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-2.png">
+          <div class="layer">
+            <h3>End-to-End Amazon Product Data Pipeline</h3>
+            <p>Built a scalable ETL pipeline in Python using pandas, os, and regex to clean 1.1M+ Amazon product records and extract 268K unique entries for structured analysis.
+              Designed a normalized SQLite database and Excel dashboard with PivotTables and PivotCharts to calculate discounts,
+              segment products, and visualize pricing and rating trends.</p>
+            <a href="https://github.com/davdo05/End-to-End-Amazon-Product-Data-Pipeline/tree/main"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-3.png" class="img-shift-left">
+          <div class="layer">
+            <h3>ASP.NET CRUD API for Employee Records</h3>
+            <p>Developed a RESTful Web API using C# and ASP.NET with .NET 8 to handle CRUD operations and manage employee records through well-defined endpoints.
+              Integrated Swagger UI for testing, implemented routing, model binding, and data annotations to ensure clean architecture and seamless request handling.</p>
+            <a href="https://github.com/davdo05/ASP.NET-CRUD-API-for-Employee-Records"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden row of more projects (initially hidden) -->
+    <div id="more-projects" class="work-list" style="display: none;">
+      <!-- Project 4 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-4.png">
+          <div class="layer">
+            <h3>Christmas Sales Analysis</h3>
+            <p>Analyzed multi-year Christmas retail data using SQL to uncover sales growth,
+                customer segmentation, and product-level performance. Leveraged window functions,
+                 CTEs, and aggregation techniques to evaluate profitability trends, identify high-value customer groups,
+                  and rank top-performing products and regions. Provided actionable insights into purchasing behavior by age, 
+                  gender, payment method, and sales channel.</p>
+            <a href="https://github.com/davdo05/SQL-Christmas-Sales-Analysis-"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-5.png">
+          <div class="layer">
+            <h3>Java Combat System – Dungeon Monster Arena</h3>
+            <p>Developed a turn-based monster combat system using Java and object-oriented principles, including inheritance,
+                abstract classes, and interfaces. Implemented dynamic combat logic such as cloning, poison effects, randomized weapon selection,
+                and stat-based attack calculations across multiple monster subclasses. Designed a modular structure to support flexible monster behavior,
+                ranking, and simulated dungeon battles.</p>
+            <a href="https://github.com/davdo05/Java-Combat-System---Dungeon-Monster-Arena"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="work">
+        <div class="img-container">
+          <img src="images/work-6.png">
+          <div class="layer">
+            <h3>Personal Website </h3>
+            <p>Developed a responsive personal portfolio website using HTML, CSS, and JavaScript with interactive navigation,
+              tabbed content, and smooth scrolling. Built a grid-based project gallery with hover overlays and expandable sections,
+              and integrated a Google Sheets–linked script for dynamic form submissions. Implemented flexbox, CSS grid, and media queries
+              for cross-device compatibility.
+            </p>
+            <a href="https://github.com/davdo05/Text-Analytics-Pipeline-for-Economic-Research"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toggle button -->
+    <a id="see-more" class="btn">See more</a>
+  </div>
+</div>
+
+<!-- -----------------contact---------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>and013@ucsd.edu</p>
+                <p><i class="fa-solid fa-phone"></i>+1 (858) 905-4168</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/davidanhdo/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/dav_do05?igsh=aGR2eTc0c24zcTZ4&utm_source=qr">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1CBAkA5ZAY/?mibextid=wwXIfr"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://github.com/davdo05"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab"); 
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu"); 
+    function openmenu(){
+        sidemenu.style.right = "0"; 
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"; 
+    }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyD8VoaW7W8KLa7uqJVFyHGhIxYyFW4ZzagKqNNsCpC3IPk-R8Q5PHGav8GaC2HTUavCA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message successfully sent"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  document.getElementById("see-more").addEventListener("click", function () {
+    var moreProjects = document.getElementById("more-projects");
+    if (moreProjects.style.display === "none") {
+      moreProjects.style.display = "grid";
+      this.textContent = "See less";
+    } else {
+      moreProjects.style.display = "none";
+      this.textContent = "See more";
+    }
+  });
+</script>
+
+
+</body> 
+</html>
