@@ -422,3 +422,83 @@ nav .fas{
   margin-top: 40px;
   align-items: start;
 }
+
+/* Small laptops / tablets: 2 columns for BOTH rows */
+/* === 601–1200px: make overlay text fit === */
+@media (min-width: 601px) and (max-width: 1200px) {
+  /* .img-container { aspect-ratio: 4 / 3; } */
+
+  .layer {
+    padding: 14px 20px;         /* tighter padding than desktop */
+  }
+
+  /* keep lines from getting too long to reduce wrapping */
+  .layer > * {
+    max-width: min(92%, 50ch);
+  }
+
+  /* slightly smaller, responsive type for this range */
+  .layer h3 {
+    font-size: clamp(15px, 2.2vw, 18px);
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .layer p {
+    font-size: clamp(12px, 1.8vw, 14px);
+    line-height: 1.45;
+    max-height: calc(100% - 52px);  /* leave room for the icon */
+    overflow-y: auto;
+    text-align: center;
+    text-wrap: pretty;
+    word-break: break-word;
+    hyphens: auto;
+    scrollbar-width: thin;        
+  }
+
+  /* smaller icon so it doesn’t crowd the text */
+  .layer a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Desktop (≥1201px): readable overlay + no icon overlap */
+@media (min-width: 1201px) {
+  .img-container { aspect-ratio: 4 / 3; }
+
+  /* keep content centered, but with responsive spacing */
+  .layer { padding: clamp(16px, 2.5vmin, 32px); }
+
+  /* limit line length so lines wrap less */
+  .layer > * { max-width: min(92%, 54ch); }
+
+  /* responsive, slightly smaller desktop type */
+  .layer h3 {
+    font-size: clamp(17px, 1.05vw, 20px);
+    margin-bottom: 10px;
+  }
+  .layer p {
+    font-size: clamp(12px, 0.95vw, 15px);
+    line-height: 1.45;
+    /* leave room for the icon button */
+    max-height: calc(100% - 64px);
+    overflow-y: auto;
+    text-wrap: pretty;
+    word-break: break-word;
+    hyphens: auto;
+    scrollbar-width: thin; /* Firefox */
+  }
+
+  /* make the icon a bit smaller on desktop */
+  .layer a {
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    margin-top: 14px;
+  }
+}
